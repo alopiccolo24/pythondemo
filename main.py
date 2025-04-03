@@ -6,12 +6,15 @@ def client_management_system():
     clients = LinkedList()
 
     def add_client():
-        name = input("Provide the client's name: ")
-        phone = input("Provide the client's phone number: ")
-        birth = input("Provide the client's date of birth: ")
-        client_data = f"{name}, {phone}, {birth}"
-        clients.append(client_data)
-        print("You've added a new client")
+        try:
+            name = input("Provide the client's name: ")
+            phone = input("Provide the client's phone number: ")
+            birth = input("Provide the client's date of birth: ")
+            client_data = f"{name}, {phone}, {birth}"
+            clients.append(client_data)
+            print("You've added a new client")
+        except Exception as e:
+            print(f"Error adding client: {e}
 
     def display_client():
         if clients.is_empty():
